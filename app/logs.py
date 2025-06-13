@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, timezone
 from app.utils.logger import get_logger
 from fastapi import HTTPException
 
-logger = get_logger('ms-edge-visor', level=logging.DEBUG)
+logger = get_logger('ms-edge-visor.logs', level=logging.DEBUG)
 logs = boto3.client('logs')
 COLOMBIA_TZ = timezone(timedelta(hours=-5))
 
