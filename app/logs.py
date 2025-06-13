@@ -59,4 +59,3 @@ def obtener_logs(log_group, tiempo_minutos=5, limite_streams=5, filtro: str = No
     except ClientError as e:
         logger.error(f"{e.response['Error']['Message']}")
         raise HTTPException(status_code=404, detail="No logs found.")
-    
